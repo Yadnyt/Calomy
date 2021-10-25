@@ -39,7 +39,12 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+        body: Container(decoration:BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/artboard4.png"),
+              fit: BoxFit.cover,
+            )
+        ),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Form(key: formKey, child: _buildSignupForm())));
@@ -58,14 +63,6 @@ class _SignupPageState extends State<SignupPage> {
                   Text('Signup',
                       style: TextStyle(fontFamily: 'Trueno', fontSize: 60.0)),
                   //Dot placement
-                  Positioned(
-                      top: 62.0,
-                      left: 200.0,
-                      child: Container(
-                          height: 10.0,
-                          width: 10.0,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: greenColor)))
                 ],
               )),
           SizedBox(height: 25.0),
@@ -77,7 +74,7 @@ class _SignupPageState extends State<SignupPage> {
                       fontSize: 12.0,
                       color: Colors.grey.withOpacity(0.5)),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: greenColor),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   )),
               onChanged: (value) {
                 this.email = value;
@@ -115,8 +112,8 @@ class _SignupPageState extends State<SignupPage> {
                 height: 50.0,
                 child: Material(
                     borderRadius: BorderRadius.circular(25.0),
-                    shadowColor: Colors.greenAccent,
-                    color: greenColor,
+                    shadowColor: Colors.blueAccent,
+                    color: Colors.lightBlueAccent,
                     elevation: 7.0,
                     child: Center(
                         child: Text('SIGN UP',
@@ -131,7 +128,7 @@ class _SignupPageState extends State<SignupPage> {
                 },
                 child: Text('Go back',
                     style: TextStyle(
-                        color: greenColor,
+                        color: Colors.black,
                         fontFamily: 'Trueno',
                         decoration: TextDecoration.underline)))
           ])
