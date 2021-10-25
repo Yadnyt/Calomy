@@ -39,6 +39,12 @@ class _ResetPasswordState extends State<ResetPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+        decoration:BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage("assets/artboard4.png"),
+    fit: BoxFit.cover,
+    )
+    ),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: Form(key: formKey, child: _buildResetForm())));
@@ -48,23 +54,14 @@ class _ResetPasswordState extends State<ResetPassword> {
     return Padding(
         padding: const EdgeInsets.only(left: 25.0, right: 25.0),
         child: ListView(children: [
-          SizedBox(height: 75.0),
+          SizedBox(height: 65.0),
           Container(
               height: 125.0,
               width: 200.0,
               child: Stack(
                 children: [
-                  Text('reset',
-                      style: TextStyle(fontFamily: 'Trueno', fontSize: 60.0)),
-                  //Dot placement
-                  Positioned(
-                      top: 47.0,
-                      left: 160.0,
-                      child: Container(
-                          height: 10.0,
-                          width: 10.0,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: greenColor)))
+                  Text('Reset Password',
+                      style: TextStyle(fontFamily: 'Trueno', fontSize: 55.0)),
                 ],
               )),
           SizedBox(height: 25.0),
@@ -76,7 +73,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       fontSize: 12.0,
                       color: Colors.grey.withOpacity(0.5)),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: greenColor),
+                    borderSide: BorderSide(color: Colors.lightBlueAccent),
                   )),
               onChanged: (value) {
                 this.email = value;
@@ -93,8 +90,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                 height: 50.0,
                 child: Material(
                     borderRadius: BorderRadius.circular(25.0),
-                    shadowColor: Colors.greenAccent,
-                    color: greenColor,
+                    shadowColor: Colors.lightBlue,
+                    color: Colors.lightBlueAccent,
                     elevation: 7.0,
                     child: Center(
                         child: Text('RESET',
@@ -109,7 +106,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                 },
                 child: Text('Go back',
                     style: TextStyle(
-                        color: greenColor,
+                        color: Colors.black,
                         fontFamily: 'Trueno',
                         decoration: TextDecoration.underline)))
           ])
