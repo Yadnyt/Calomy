@@ -45,7 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       
       pages: [
         PageViewModel(
-          title: "Personal trainers",
+          title: "Personal Training Routine",
           body:
               "Personalized \n Workout Routine",
           image: _buildImage('workout1'),
@@ -54,30 +54,30 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         PageViewModel(
           title: "Learn as you go",
           body:
-              "Download the Stockpile app and master the market with our mini-lesson.",
+              "Learn Exercises Staying at your home",
           image: _buildImage('workout2'),
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Kids and teens",
+          title: "Time Based Sets",
           body:
-              "Kids and teens can track their stocks 24/7 and place trades that you approve.",
+              "Choose however long you wanna workout!",
           image: _buildImage('workout3'),
           decoration: pageDecoration,
         ),
   
         PageViewModel(
-          title: "Title of last page",
+          title: "Ready To Workout?",
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text("Click on ", style: bodyStyle),
-              Icon(Icons.edit),
-              Text(" to edit a post", style: bodyStyle),
+              Text("Press Done when you \n are ready to workout! ", style: bodyStyle),
+
             ],
           ),
-          image: _buildImage('placeholder'),
+          image: _buildImage('calomylogo'),
           decoration: pageDecoration,
+
         ),
       ],
       onDone: () => _onIntroEnd(context),
