@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">studio_projects</string>
+
+
+
+<string name="facebook_app_id">267152751898804</string>
+<string name="fb_login_protocol_scheme">fb267152751898804</string>
+</resources>
